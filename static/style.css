@@ -1,0 +1,29 @@
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.main-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.main-text{
+    margin-top: 20px;
+}
+.main-text h2{
+    color: #6c6c6c;
+    font-weight: 400;
+}
+.main-login-author{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.main-meta{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+
+}

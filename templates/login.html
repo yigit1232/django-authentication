@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block title %}
+    Log in
+{% endblock %}
+
+{% block body %}
+<div class="auth">
+
+<div class="auth">
+
+    <div class="card mt-5" style="width: 25rem;">
+      <div class="card-body">
+        <h5 class="card-title pb-3 border-bottom">Log in</h5>
+          {% if error %}
+            <div class="alert alert-danger mt-3 mb-3">
+                {{ error }}
+            </div>
+          {% endif %}
+          <form action="{% url 'login' %}" method="post">
+              {% csrf_token %}
+                {{ form }}
+              <button type="submit" class="btn btn-primary form-control mb-3">Log in</button>
+              <p>Don't have an account yet? <a href="{% url 'signup' %}">Signup</a> </p>
+              <a href="{% url 'forgot_password' %}" class="text-decoration-none">Forgot password ?</a>
+          </form>
+      </div>
+    </div>
+
+</div>
+
+</div>
+{% endblock %}

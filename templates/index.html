@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block title %}
+Home
+{% endblock %}
+
+
+{% block body %}
+<div class="main">
+<div class="main-image">
+    <img src="../static/django.jpg" width="200" alt="">
+</div>
+<div class="main-text">
+<h2>Django Authentication System</h2>
+</div>
+    {% if request.user.is_authenticated %}
+        <div class="main-login-author">
+            <h4>Welcome <strong class="text-danger">{{ user.username }}</strong></h4>
+             <h5 class="mt-3">Login <strong class="text-success">Success</strong></h5>
+        </div>
+    {% endif %}
+
+
+<div class="main-meta">
+    <a href="https://github.com/yigit1232" class="text-decoration-none"  target="_blank">Github</a>
+    <a href="https://www.instagram.com/yigit.ucun/" class="text-decoration-none"  target="_blank">İnstagram</a>
+</div>
+<div class="main-version mt-4 text-center">
+    <span class="text-muted">Django Version: {{ version }} </span>
+</div>
+</div>
+{% endblock %}
